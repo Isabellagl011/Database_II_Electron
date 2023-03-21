@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' http://localhost:5984 ; script-src 'self'"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>Dane</title>
+  </head>
+
+  <body id="Showtable">
+    <h1>Registros</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellidos</th>
+          <th scope="col">Celular</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Email</th>
+          <th scope="col">Estrato</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <div class="container section">
+      <button type="button" class="btn btn-success" id="show">
+        Cargar registros
+      </button>
+
+      <button type="button" class="btn btn-success" id="sync">
+        Sincronizar documentos
+      </button>
+
+      <a href="index.html" type="button" class="btn btn-info">
+        Volver al formulario
+      </a>
+    </div>
+    <script src="node_modules/pouchdb/dist/pouchdb.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="pouch.js"></script>
+  </body>
+</html>

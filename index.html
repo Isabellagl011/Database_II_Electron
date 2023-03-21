@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' http://localhost:5984 ; script-src 'self'"
+    />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <title>Dane</title>
+  </head>
+  <body>
+    <div align="center">
+      <img src="./assets/img/Captura.JPG" width="300px" height="60px" />
+    </div>
+
+    <h1 class="text-center">Bienvenido al registro del ciudadano</h1>
+    <div>
+      <p class="text-center">
+        LLenar el siguiente fomulario con su información:
+      </p>
+    </div>
+
+    <div class="container section">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Nombre(s) :</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nombre"
+          aria-label="Nombre"
+          aria-describedby="basic-addon1"
+          id="name"
+        />
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Apellido :</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Apellido"
+          aria-label="Apellido"
+          aria-describedby="basic-addon1"
+          id="lastnames"
+        />
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"> Celular :</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Telefono Celular"
+          aria-label="Telefono Celular"
+          aria-describedby="basic-addon1"
+          id="cellphone"
+        />
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Dirección:</span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Dirección del inmueble"
+          aria-label="Dirección del inmueble"
+          aria-describedby="basic-addon1"
+          id="direction"
+        />
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2"
+          >Correo Electrónico</span
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Correo Electronico"
+          aria-label="Correo Electronico"
+          aria-describedby="basic-addon2"
+          id="email"
+        />
+      </div>
+
+      <div class="input-group mb-3">
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          id="stratum"
+        >
+          <option selected value="NA">estrato:</option>
+          <option value="1">Uno (1)</option>
+          <option value="2">Dos (2)</option>
+          <option value="3">Tres (3)</option>
+          <option value="4">Cuatro (4)</option>
+          <option value="5">Cinco (5)</option>
+          <option value="6">Seis (6)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container section" align="center">
+      <button type="button" class="btn btn-success" id="createButton">
+        Enviar Información
+      </button>
+
+      <a
+        href="documents.html"
+        type="button"
+        class="btn btn-success"
+        id="createButton"
+      >
+        Ver Registros
+      </a>
+    </div>
+    <script src="node_modules/pouchdb/dist/pouchdb.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="pouch.js"></script>
+  </body>
+</html>
